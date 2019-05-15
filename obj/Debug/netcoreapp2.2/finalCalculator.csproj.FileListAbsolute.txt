@@ -1,0 +1,11 @@
+/home/ghazale/projectC#/Calc/finalCalculator/bin/Debug/netcoreapp2.2/finalCalculator.deps.json
+/home/ghazale/projectC#/Calc/finalCalculator/bin/Debug/netcoreapp2.2/finalCalculator.runtimeconfig.json
+/home/ghazale/projectC#/Calc/finalCalculator/bin/Debug/netcoreapp2.2/finalCalculator.runtimeconfig.dev.json
+/home/ghazale/projectC#/Calc/finalCalculator/bin/Debug/netcoreapp2.2/finalCalculator.dll
+/home/ghazale/projectC#/Calc/finalCalculator/bin/Debug/netcoreapp2.2/finalCalculator.pdb
+/home/ghazale/projectC#/Calc/finalCalculator/obj/Debug/netcoreapp2.2/finalCalculator.csprojAssemblyReference.cache
+/home/ghazale/projectC#/Calc/finalCalculator/obj/Debug/netcoreapp2.2/finalCalculator.csproj.CoreCompileInputs.cache
+/home/ghazale/projectC#/Calc/finalCalculator/obj/Debug/netcoreapp2.2/finalCalculator.AssemblyInfoInputs.cache
+/home/ghazale/projectC#/Calc/finalCalculator/obj/Debug/netcoreapp2.2/finalCalculator.AssemblyInfo.cs
+/home/ghazale/projectC#/Calc/finalCalculator/obj/Debug/netcoreapp2.2/finalCalculator.dll
+/home/ghazale/projectC#/Calc/finalCalculator/obj/Debug/netcoreapp2.2/finalCalculator.pdb
