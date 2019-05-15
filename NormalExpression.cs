@@ -81,20 +81,19 @@ namespace Calc
             if(i.Token is OpenningParentheses)
                 return 0;
             if(i.Token is Plus)
-                return 1;
+                return 12;
             if(i.Token is Minus)
-                return 2;
+                return 12;
             if(i.Token is Multiplicator)
-                return 3;
+                return 13;
             if(i.Token is Divisor)
-                return 4;
+                return 13;
             return 5;
         }
 
         private bool Predecessor(Item firstOperator, Item secondOperator)
         {
-            int[] precedence = { 0, 12, 12, 13, 13};
-            return (precedence[position(firstOperator)] >= precedence[position(secondOperator)]) ? true : false;
+            return (position(firstOperator) < position(secondOperator)) ? true : false;
         }
 
         
@@ -103,12 +102,17 @@ namespace Calc
             Stack<Item> preFixedItems = new Stack<Item>();
             Item top;
             Stack<Item> oprerator = new Stack<Item>();
-            foreach (Item i in items)
-            {
+            while(items.Count!=0)
+            {   
+                Item i = items.Pop();
                 if (i.IsValue)
+                {
                     preFixedItems.Push(i);
+                }
                 else if (i.Token is OpenningParentheses)
+                {
                     oprerator.Push(i);
+                }
                 else if (i.Token is ClosingParentheses)
                 {
                     top = oprerator.Pop();
@@ -120,22 +124,21 @@ namespace Calc
                 }
                 else
                 {
-                    if (oprerator.Count != 0 && Predecessor(oprerator.Peek(), i))
-                    {
-                        top = oprerator.Pop();
-                        while (Predecessor(top, i))
-                        {
-                        preFixedItems.Push(top);
+                    if (oprerator.Count != 0 && Predecessor(i, oprerator.Peek()))
+                    {  
+                        preFixedItems.Push( oprerator.Pop());
+                        while (oprerator.Count != 0 && Predecessor(i, oprerator.Peek()))
+                        {   
+                            top = oprerator.Pop();
+                            preFixedItems.Push(top);
 
-                        if (oprerator.Count == 0)
-                            break;
-
-                        top = oprerator.Pop();
                         }
                         oprerator.Push(i);
                     }
                     else
+                    {
                         oprerator.Push(i);
+                    }
                 }
             }
             while (oprerator.Count > 0)

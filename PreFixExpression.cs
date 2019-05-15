@@ -36,13 +36,20 @@ namespace Calc
                 s = create();
 
             PreFixExpression p = new PreFixExpression(o, f, s);
-            // Console.WriteLine(p.First.GetValue() + "" + p.Operator.Type + "" + p.Second.GetValue());
+            //Console.WriteLine(p.First.GetValue() + "" + p.Operator.Type + "" + p.Second.GetValue());
             return p;
         }
         
         public PreFixExpression(Stack<Item> list)
         {   
             this.items = list;
+            // while(items.Count!=0){
+            //     Item i = items.Pop();
+            //     if(i.IsValue)
+            //         Console.WriteLine(i.Value);
+            //     else
+            //         Console.WriteLine(i.Token.Type);
+            // }
             PreFixExpression temp = create();
             this.Operator = temp.Operator;
             this.First = temp.First;
