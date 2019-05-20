@@ -8,6 +8,8 @@ namespace Calc
 
         public Input(){
             input = Console.ReadLine();
+            input = input.Replace(" ", "");
+            input = input.Replace("\t", "");
         }
     }
 }

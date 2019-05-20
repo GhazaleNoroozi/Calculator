@@ -8,7 +8,7 @@ namespace Calc
     public class NormalExpression : Expression
     {
         public static new NormalExpression Parse(string input)
-        {
+        { 
             var exp = new NormalExpression();
             bool isPrevOperator = true;
             int index = 0;
